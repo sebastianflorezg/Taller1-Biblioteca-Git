@@ -54,6 +54,15 @@ public class Main {
     public static ArrayList<Book> ListBook() {
         return books;
     }
+    
+    public static Book ReadBook(String ID) {
+        for(Book book: books) {
+            if(book.getID().equals(ID)) {
+                return book;
+            }
+        }
+        return null;
+    }
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
