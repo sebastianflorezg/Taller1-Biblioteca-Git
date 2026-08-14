@@ -35,6 +35,16 @@ public class Main {
         }
         return false;
     }
+    
+    public static boolean Delete(String ID, String Name, String Identification, String PhoneNumber, String Address) {
+        Customer customer = Read(ID);
+    
+        if (customer != null) {
+            customers.remove(customer);
+            return true;
+        }
+        return false;
+    }
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
