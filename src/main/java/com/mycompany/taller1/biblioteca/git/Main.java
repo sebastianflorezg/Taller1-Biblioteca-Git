@@ -78,6 +78,16 @@ public class Main {
         }
         return false;
     }
+    
+    public static boolean Delete(String ID, String Title, String YearPublication, String Author, boolean Availability, String Editorial, int NumPages) {
+        Book book = ReadBook(ID);
+    
+        if (book != null) {
+            books.remove(book);
+            return true;
+        }
+        return false;
+    }
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
