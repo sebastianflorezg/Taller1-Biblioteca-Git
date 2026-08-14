@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Main {
     static ArrayList<Customer> customers = new ArrayList<>();
     static ArrayList<Book> books = new ArrayList<>();
+    static ArrayList<Loan> loans = new ArrayList<>();
     static Scanner sc = new Scanner(System.in);
     
     public static void Create(Customer customer) {
@@ -87,6 +88,10 @@ public class Main {
             return true;
         }
         return false;
+    }
+    
+    public static void CreateLoan(Loan loan) {
+        loans.add(loan);
     }
 
     public static void main(String[] args) {
