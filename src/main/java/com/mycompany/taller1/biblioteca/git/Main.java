@@ -50,6 +50,10 @@ public class Main {
     public static void CreateBook(Book book) {
         books.add(book);
     }
+    
+    public static ArrayList<Book> ListBook() {
+        return books;
+    }
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
