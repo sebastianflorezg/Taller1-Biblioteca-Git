@@ -93,6 +93,16 @@ public class Main {
     public static void CreateLoan(Loan loan) {
         loans.add(loan);
     }
+    
+    public static void Return(String ID) {
+        for(Loan loan : loans) {
+            if(loan.getID().equals(ID)) {
+                System.out.println("Prestamo devulto correctamente");
+                return;
+            }
+        }
+        System.out.println("No se encontro el prestamo...");
+    }
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
