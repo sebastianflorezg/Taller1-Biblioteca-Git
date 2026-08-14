@@ -9,6 +9,10 @@ public class Main {
     public static void Create(Customer customer) {
         customers.add(customer);
     }
+    
+    public static ArrayList<Customer> List() {
+        return customers;
+    }
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
