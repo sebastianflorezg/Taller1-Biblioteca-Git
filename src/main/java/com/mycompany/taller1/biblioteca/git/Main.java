@@ -22,6 +22,19 @@ public class Main {
         }
         return null;
     }
+    
+    public static boolean Update(String ID, String Name, String Identification, String PhoneNumber, String Address) {
+        Customer customer = Read(ID);
+    
+        if (customer != null) {
+            customer.setAddress(Name);
+            customer.setIdentification(Identification);
+            customer.setPhoneNumber(PhoneNumber);
+            customer.setName(Address);
+            return true;
+        }
+        return false;
+    }
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
