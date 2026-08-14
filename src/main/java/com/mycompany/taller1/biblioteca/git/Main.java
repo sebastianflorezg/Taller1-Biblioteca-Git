@@ -3,7 +3,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    static ArrayList<Customer> customers = new ArrayList<>(); 
+    static ArrayList<Customer> customers = new ArrayList<>();
+    static ArrayList<Book> books = new ArrayList<>();
     static Scanner sc = new Scanner(System.in);
     
     public static void Create(Customer customer) {
@@ -44,6 +45,10 @@ public class Main {
             return true;
         }
         return false;
+    }
+    
+    public static void CreateBook(Book book) {
+        books.add(book);
     }
 
     public static void main(String[] args) {
