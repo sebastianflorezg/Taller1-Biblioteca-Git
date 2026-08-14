@@ -13,6 +13,15 @@ public class Main {
     public static ArrayList<Customer> List() {
         return customers;
     }
+    
+    public static Customer Read(String ID) {
+        for(Customer customer : customers) {
+            if(customer.getID().equals(ID)) {
+                return customer;
+            }
+        }
+        return null;
+    }
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
