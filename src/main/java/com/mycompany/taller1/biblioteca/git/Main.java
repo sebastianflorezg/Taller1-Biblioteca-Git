@@ -3,7 +3,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    static ArrayList<Customer> customers = new ArrayList<>(); 
+    static ArrayList<Customer> customers = new ArrayList<>();
+    static ArrayList<Book> books = new ArrayList<>();
     static Scanner sc = new Scanner(System.in);
     
     public static void Create(Customer customer) {
@@ -41,6 +42,48 @@ public class Main {
     
         if (customer != null) {
             customers.remove(customer);
+            return true;
+        }
+        return false;
+    }
+    
+    public static void CreateBook(Book book) {
+        books.add(book);
+    }
+    
+    public static ArrayList<Book> ListBook() {
+        return books;
+    }
+    
+    public static Book ReadBook(String ID) {
+        for(Book book: books) {
+            if(book.getID().equals(ID)) {
+                return book;
+            }
+        }
+        return null;
+    }
+    
+    public static boolean Update(String ID, String Title, String YearPublication, String Author, boolean Availability, String Editorial, int NumPages) {
+        Book book = ReadBook(ID);
+    
+        if (book != null) {
+            book.setTitle(Title);
+            book.setYearPublication(YearPublication);
+            book.setAuthor(Author);
+            book.setAvailability(Availability);
+            book.setEditorial(Editorial);
+            book.setNumPages(NumPages);
+            return true;
+        }
+        return false;
+    }
+    
+    public static boolean Delete(String ID, String Title, String YearPublication, String Author, boolean Availability, String Editorial, int NumPages) {
+        Book book = ReadBook(ID);
+    
+        if (book != null) {
+            books.remove(book);
             return true;
         }
         return false;
