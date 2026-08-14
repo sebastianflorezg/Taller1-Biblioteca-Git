@@ -63,6 +63,21 @@ public class Main {
         }
         return null;
     }
+    
+    public static boolean Update(String ID, String Title, String YearPublication, String Author, boolean Availability, String Editorial, int NumPages) {
+        Book book = ReadBook(ID);
+    
+        if (book != null) {
+            book.setTitle(Title);
+            book.setYearPublication(YearPublication);
+            book.setAuthor(Author);
+            book.setAvailability(Availability);
+            book.setEditorial(Editorial);
+            book.setNumPages(NumPages);
+            return true;
+        }
+        return false;
+    }
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
