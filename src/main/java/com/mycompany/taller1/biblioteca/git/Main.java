@@ -103,6 +103,10 @@ public class Main {
         }
         System.out.println("No se encontro el prestamo...");
     }
+    
+    public static ArrayList<Loan> ListLoan() {
+        return loans;
+    }
 
     public static void main(String[] args) {
         System.out.println("Hello World!");
