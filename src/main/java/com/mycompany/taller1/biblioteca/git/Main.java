@@ -201,7 +201,7 @@ public class Main {
                     break;
 
                 case 4:
-                    System.out.println("\n--- ACTUALIZAR CLIENTE ---");
+                    System.out.println("\n--- Actualizar cliente ---");
 
                     System.out.print("Ingrese el ID del cliente:: ");
                     String updateId = sc.nextLine();
