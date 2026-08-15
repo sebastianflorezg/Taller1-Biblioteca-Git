@@ -29,10 +29,10 @@ public class Main {
         Customer customer = Read(ID);
     
         if (customer != null) {
-            customer.setAddress(Name);
+            customer.setName(Name);
             customer.setIdentification(Identification);
             customer.setPhoneNumber(PhoneNumber);
-            customer.setName(Address);
+            customer.setAddress(Address);
             return true;
         }
         return false;
