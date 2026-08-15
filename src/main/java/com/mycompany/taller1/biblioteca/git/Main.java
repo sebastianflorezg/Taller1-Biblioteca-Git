@@ -29,10 +29,10 @@ public class Main {
         Customer customer = Read(ID);
     
         if (customer != null) {
-            customer.setAddress(Name);
+            customer.setName(Name);
             customer.setIdentification(Identification);
             customer.setPhoneNumber(PhoneNumber);
-            customer.setName(Address);
+            customer.setAddress(Address);
             return true;
         }
         return false;
@@ -97,6 +97,7 @@ public class Main {
     public static void Return(String ID) {
         for(Loan loan : loans) {
             if(loan.getID().equals(ID)) {
+                loans.remove(loan);
                 System.out.println("Prestamo devulto correctamente");
                 return;
             }
