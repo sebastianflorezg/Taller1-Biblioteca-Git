@@ -38,7 +38,7 @@ public class Main {
         return false;
     }
     
-    public static boolean Delete(String ID, String Name, String Identification, String PhoneNumber, String Address) {
+    public static boolean Delete(String ID) {
         Customer customer = Read(ID);
     
         if (customer != null) {
@@ -65,7 +65,7 @@ public class Main {
         return null;
     }
     
-    public static boolean Update(String ID, String Title, String YearPublication, String Author, boolean Availability, String Editorial, int NumPages) {
+    public static boolean UpdateBook(String ID, String Title, String YearPublication, String Author, boolean Availability, String Editorial, int NumPages) {
         Book book = ReadBook(ID);
     
         if (book != null) {
@@ -80,7 +80,7 @@ public class Main {
         return false;
     }
     
-    public static boolean Delete(String ID, String Title, String YearPublication, String Author, boolean Availability, String Editorial, int NumPages) {
+    public static boolean DeleteBook(String ID) {
         Book book = ReadBook(ID);
     
         if (book != null) {
@@ -97,7 +97,9 @@ public class Main {
     public static void Return(String ID) {
         for(Loan loan : loans) {
             if(loan.getID().equals(ID)) {
-                System.out.println("Prestamo devulto correctamente");
+                loan.getObject().setAvailability(true);
+                loans.remove(loan);
+                System.out.println("Prestamo devulto correctamente.");
                 return;
             }
         }
@@ -109,6 +111,6 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
     }
 }
