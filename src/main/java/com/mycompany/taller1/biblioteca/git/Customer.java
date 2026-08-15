@@ -4,7 +4,7 @@ public class Customer extends Person{
     String ID;
     String Address;
 
-    public Customer(String ID, String Address, String Name, String Identification, String PhoneNumber) {
+    public Customer(String ID, String Name, String Identification, String PhoneNumber, String Address) {
         super (Name, Identification, PhoneNumber);
         this.ID = ID;
         this.Address = Address;
